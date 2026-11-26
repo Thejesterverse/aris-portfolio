@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#050506" />
+  <meta name="description" content="Project Experience — My Web3 Journey. Official Web3 collaborations by Aris (@Big_aris01) across community, ambassador, and content programs." />
+  <title>Aris | My Web3 Journey</title>
+  <link rel="canonical" href="https://thejesterverse.github.io/aris-portfolio/" />
+  <link rel="icon" href="assets/aris-avatar.jpg" type="image/jpeg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Aris" />
+  <meta property="og:url" content="https://thejesterverse.github.io/aris-portfolio/" />
+  <meta property="og:title" content="Aris | My Web3 Journey" />
+  <meta property="og:description" content="Project Experience — My Web3 Journey. Official Web3 collaborations by Aris (@Big_aris01) across community, ambassador, and content programs." />
+  <meta property="og:image" content="https://thejesterverse.github.io/aris-portfolio/assets/aris-avatar.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1254" />
+  <meta property="og:image:height" content="1254" />
+  <meta property="og:image:alt" content="Aris, a portrait with white spiky hair, a black blindfold, and a black T-shirt" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Aris | My Web3 Journey" />
+  <meta name="twitter:description" content="Project Experience — My Web3 Journey. Official Web3 collaborations by Aris (@Big_aris01) across community, ambassador, and content programs." />
+  <meta name="twitter:image" content="https://thejesterverse.github.io/aris-portfolio/assets/aris-avatar.jpg" />
+  <meta name="twitter:image:alt" content="Aris, a portrait with white spiky hair, a black blindfold, and a black T-shirt" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #050506;
+      --text: #f5f5f7;
+      --muted: rgba(245, 245, 247, 0.58);
+      --muted-2: rgba(245, 245, 247, 0.42);
+      --glass: linear-gradient(180deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.045) 100%);
+      --radius: 28px;
+      --radius-sm: 999px;
+      --pad: clamp(20px, 4vw, 48px);
+      --max: 1120px;
+      --shadow: 0 10px 40px rgba(0, 0, 0, 0.45), 0 1px 0 rgba(255, 255, 255, 0.04);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      min-height: 100%;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    body {
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ---------- Atmosphere ---------- */
+    .atmosphere {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.85;
+      will-change: transform;
+    }
+
+    .blob-a {
+      width: 52vw; height: 52vw; max-width: 720px; max-height: 720px;
+      top: -12%; left: 42%;
+      background: radial-gradient(circle, rgba(98, 92, 255, 0.55), rgba(98, 92, 255, 0) 70%);
+      animation: drift-a 22s ease-in-out infinite;
+    }
+    .blob-b {
+      width: 44vw; height: 44vw; max-width: 580px; max-height: 580px;
+      top: 28%; left: -12%;
+      background: radial-gradient(circle, rgba(168, 70, 255, 0.42), rgba(168, 70, 255, 0) 70%);
+      animation: drift-b 26s ease-in-out infinite;
+    }
+    .blob-c {
+      width: 40vw; height: 40vw; max-width: 520px; max-height: 520px;
+      bottom: 4%; right: -8%;
+      background: radial-gradient(circle, rgba(40, 170, 255, 0.38), rgba(40, 170, 255, 0) 70%);
+      animation: drift-c 24s ease-in-out infinite;
+    }
+    .blob-d {
+      width: 28vw; height: 28vw; max-width: 360px; max-height: 360px;
+      top: 58%; left: 38%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0) 70%);
+      animation: drift-d 18s ease-in-out infinite;
+    }
+
+    @keyframes drift-a {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(-8%, 10%) scale(1.08); }
+    }
+    @keyframes drift-b {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(12%, -8%) scale(1.1); }
+    }
+    @keyframes drift-c {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(-10%, -12%) scale(1.06); }
+    }
+    @keyframes drift-d {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(8%, 6%) scale(1.15); }
+    }
+
+    .vignette {
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(5, 5, 6, 0.15), transparent 55%),
+        radial-gradient(ellipse 90% 70% at 50% 100%, rgba(5, 5, 6, 0.55), transparent 60%),
+        linear-gradient(180deg, rgba(5, 5, 6, 0.2) 0%, transparent 18%, transparent 82%, rgba(5, 5, 6, 0.4) 100%);
+    }
+
+    /* ---------- Layout ---------- */
+    .page {
+      position: relative;
+      z-index: 2;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 56px var(--pad) 72px;
+    }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 12px 0 64px;
+    }
+
+    .avatar-ring {
+      position: relative;
+      width: 148px;
+      height: 148px;
+      border-radius: 50%;
+      padding: 4px;
+      background: linear-gradient(145deg, rgba(255,255,255,0.65) 0%, rgba(255,255,255,0.12) 38%, rgba(255,255,255,0.04) 62%, rgba(255,255,255,0.35) 100%);
+      box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.45),
+        0 0 0 1px rgba(255,255,255,0.06),
+        0 0 80px rgba(110, 100, 255, 0.28);
+      margin-bottom: 28px;
+      animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    .avatar-ring img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      background: #111;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+      animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.08s both;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 6vw, 56px);
+      font-weight: 600;
+      letter-spacing: -0.035em;
+      line-height: 1.05;
+      color: #fff;
+      animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.14s both;
+    }
+
+    .hero-name {
+      margin-top: 14px;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--text);
+      animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+    }
+
+    .hero-handle {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 8px;
+      padding: 6px 14px;
+      border-radius: var(--radius-sm);
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 500;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(16px) saturate(160%);
+      -webkit-backdrop-filter: blur(16px) saturate(160%);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12), 0 1px 0 rgba(255,255,255,0.06);
+      animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.26s both;
+      transition: color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .hero-handle:hover,
+    .hero-handle:focus-visible {
+      color: #fff;
+      background: rgba(255,255,255,0.09);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.22), 0 1px 0 rgba(255,255,255,0.1);
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ---------- Grid ---------- */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card-enter {
+      animation: rise 0.85s cubic-bezier(0.16, 1, 0.3, 1) both;
+      animation-delay: calc(0.32s + var(--i) * 0.08s);
+      height: 100%;
+    }
+
+    /* ---------- Glass card ---------- */
+    .project-card {
+      --mx: 50%;
+      --my: 30%;
+      --tilt-x: 0deg;
+      --tilt-y: 0deg;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      height: 100%;
+      min-height: 280px;
+      padding: 24px 24px 22px;
+      border-radius: var(--radius);
+      background: var(--glass);
+      backdrop-filter: blur(36px) saturate(180%);
+      -webkit-backdrop-filter: blur(36px) saturate(180%);
+      box-shadow: var(--shadow), inset 0 1px 0 rgba(255,255,255,0.16);
+      isolation: isolate;
+      overflow: hidden;
+      transform: perspective(900px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y));
+      transform-style: preserve-3d;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+      outline: none;
+    }
+
+    /* Fine reflective 1px gradient border */
+    .project-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1px;
+      background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.55) 0%,
+        rgba(255, 255, 255, 0.12) 28%,
+        rgba(255, 255, 255, 0.03) 52%,
+        rgba(255, 255, 255, 0.18) 78%,
+        rgba(255, 255, 255, 0.32) 100%
+      );
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+      z-index: 3;
+    }
+
+    /* Specular top sheen */
+    .project-card::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 8%;
+      right: 8%;
+      height: 42%;
+      border-radius: 24px 24px 80% 80%;
+      background: linear-gradient(180deg, rgba(255,255,255,0.16) 0%, rgba(255,255,255,0.04) 45%, transparent 100%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .card-glow {
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: radial-gradient(circle 200px at var(--mx) var(--my), rgba(255,255,255,0.18), transparent 62%);
+      opacity: 0;
+      transition: opacity 0.35s ease;
+      pointer-events: none;
+      z-index: 1;
+      mix-blend-mode: screen;
+    }
+
+    .card-sheen {
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 4;
+    }
+
+    .card-sheen span {
+      position: absolute;
+      top: -60%;
+      left: -40%;
+      width: 46%;
+      height: 220%;
+      background: linear-gradient(105deg, transparent 0%, rgba(255,255,255,0.0) 35%, rgba(255,255,255,0.28) 50%, rgba(255,255,255,0.0) 65%, transparent 100%);
+      transform: translateX(-160%) rotate(18deg);
+      pointer-events: none;
+    }
+
+    .project-card:hover,
+    .project-card:focus-visible {
+      box-shadow:
+        0 18px 50px rgba(0, 0, 0, 0.55),
+        0 0 0 1px rgba(255,255,255,0.06),
+        inset 0 1px 0 rgba(255,255,255,0.22);
+    }
+
+    .project-card:hover .card-glow,
+    .project-card:focus-visible .card-glow {
+      opacity: 1;
+    }
+
+    .project-card:hover .card-sheen span,
+    .project-card:focus-visible .card-sheen span {
+      animation: sweep 0.85s ease;
+    }
+
+    @keyframes sweep {
+      from { transform: translateX(-160%) rotate(18deg); }
+      to { transform: translateX(340%) rotate(18deg); }
+    }
+
+    .project-card:focus-visible {
+      box-shadow:
+        0 18px 50px rgba(0, 0, 0, 0.55),
+        0 0 0 2px #fff,
+        inset 0 1px 0 rgba(255,255,255,0.22);
+    }
+
+    .card-top {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 22px;
+    }
+
+    .card-number {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .view-affordance {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--muted);
+      letter-spacing: 0.01em;
+      transition: color 0.25s ease, transform 0.25s ease;
+    }
+
+    .view-affordance svg {
+      width: 14px;
+      height: 14px;
+      opacity: 0.7;
+    }
+
+    .project-card:hover .view-affordance,
+    .project-card:focus-visible .view-affordance {
+      color: #fff;
+      transform: translateX(2px);
+    }
+
+    .logo-wrap {
+      position: relative;
+      z-index: 2;
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      padding: 3px;
+      margin-bottom: 22px;
+      background: linear-gradient(145deg, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.08) 45%, rgba(255,255,255,0.28) 100%);
+      box-shadow:
+        0 8px 22px rgba(0, 0, 0, 0.35),
+        inset 0 1px 1px rgba(255,255,255,0.35);
+      flex-shrink: 0;
+    }
+
+    .logo-wrap img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      background: #0a0a0c;
+    }
+
+    .project-card h2 {
+      position: relative;
+      z-index: 2;
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+
+    .role {
+      position: relative;
+      z-index: 2;
+      display: inline-flex;
+      align-items: center;
+      padding: 5px 11px;
+      border-radius: var(--radius-sm);
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(245, 245, 247, 0.88);
+      background: rgba(255,255,255,0.07);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12);
+      margin-bottom: 18px;
+      line-height: 1.3;
+    }
+
+    .handle {
+      position: relative;
+      z-index: 2;
+      margin-top: auto;
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--muted);
+      letter-spacing: 0.01em;
+    }
+
+    /* ---------- Contact / footer ---------- */
+    .contact {
+      margin-top: 72px;
+      padding-top: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.7s both;
+    }
+
+    .contact h2 {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 11px 18px;
+      border-radius: var(--radius-sm);
+      background: rgba(255,255,255,0.06);
+      backdrop-filter: blur(24px) saturate(170%);
+      -webkit-backdrop-filter: blur(24px) saturate(170%);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.14), 0 8px 24px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.12);
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 500;
+      transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+    }
+
+    .contact-link svg {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+      opacity: 0.9;
+    }
+
+    .contact-link:hover,
+    .contact-link:focus-visible {
+      background: rgba(255,255,255,0.11);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.26), 0 10px 28px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.18);
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    .fineprint {
+      margin-top: 28px;
+      font-size: 12px;
+      color: var(--muted-2);
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 960px) {
+      .grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 620px) {
+      .page { padding: 40px 18px 56px; }
+      .hero { padding-bottom: 44px; }
+      .avatar-ring { width: 120px; height: 120px; margin-bottom: 22px; }
+      .grid { grid-template-columns: 1fr; gap: 14px; }
+      .project-card { min-height: 0; padding: 22px 20px 20px; }
+      .contact { margin-top: 52px; }
+      .contact-link { width: 100%; justify-content: center; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .blob,
+      .avatar-ring,
+      .eyebrow,
+      .hero h1,
+      .hero-name,
+      .hero-handle,
+      .card-enter,
+      .contact {
+        animation: none !important;
+      }
+      .project-card,
+      .project-card:hover .card-sheen span,
+      .project-card:focus-visible .card-sheen span,
+      .view-affordance,
+      .contact-link {
+        animation: none !important;
+        transition: none !important;
+        transform: none !important;
+      }
+      .card-glow { opacity: 0 !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="atmosphere" aria-hidden="true">
+    <div class="blob blob-a"></div>
+    <div class="blob blob-b"></div>
+    <div class="blob blob-c"></div>
+    <div class="blob blob-d"></div>
+  </div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <main class="page">
+    <header class="hero">
+      <div class="avatar-ring">
+        <img src="assets/aris-avatar.jpg" width="148" height="148" alt="Aris, a portrait with white spiky hair, a black blindfold, and a black T-shirt" />
+      </div>
+      <p class="eyebrow">Project Experience</p>
+      <h1>My Web3 Journey</h1>
+      <p class="hero-name">Aris</p>
+      <a class="hero-handle" href="https://x.com/Big_aris01" target="_blank" rel="noopener noreferrer">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.74l7.727-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        @Big_aris01
+      </a>
+    </header>
+
+    <section class="grid" aria-label="Web3 project experience">
+      <div class="card-enter" style="--i: 0">
+        <a class="project-card" href="https://x.com/AstarterDefiHub" target="_blank" rel="noopener noreferrer">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-sheen" aria-hidden="true"><span></span></span>
+          <div class="card-top">
+            <span class="card-number">01</span>
+            <span class="view-affordance">View on X <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+          </div>
+          <div class="logo-wrap">
+            <img src="assets/astarter.jpg" width="72" height="72" alt="ASTARTER official logo" />
+          </div>
+          <h2>ASTARTER</h2>
+          <span class="role">Community Manager</span>
+          <span class="handle">@AstarterDefiHub</span>
+        </a>
+      </div>
+
+      <div class="card-enter" style="--i: 1">
+        <a class="project-card" href="https://x.com/aitvgg" target="_blank" rel="noopener noreferrer">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-sheen" aria-hidden="true"><span></span></span>
+          <div class="card-top">
+            <span class="card-number">02</span>
+            <span class="view-affordance">View on X <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+          </div>
+          <div class="logo-wrap">
+            <img src="assets/aitv.jpg" width="72" height="72" alt="AITV official logo" />
+          </div>
+          <h2>AITV</h2>
+          <span class="role">Ambassador Lead</span>
+          <span class="handle">@aitvgg</span>
+        </a>
+      </div>
+
+      <div class="card-enter" style="--i: 2">
+        <a class="project-card" href="https://x.com/GOATNetwork" target="_blank" rel="noopener noreferrer">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-sheen" aria-hidden="true"><span></span></span>
+          <div class="card-top">
+            <span class="card-number">03</span>
+            <span class="view-affordance">View on X <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+          </div>
+          <div class="logo-wrap">
+            <img src="assets/goat-network.jpg" width="72" height="72" alt="GOAT NETWORK official logo" />
+          </div>
+          <h2>GOAT NETWORK</h2>
+          <span class="role">Ambassador</span>
+          <span class="handle">@GOATNetwork</span>
+        </a>
+      </div>
+
+      <div class="card-enter" style="--i: 3">
+        <a class="project-card" href="https://x.com/byzanlink" target="_blank" rel="noopener noreferrer">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-sheen" aria-hidden="true"><span></span></span>
+          <div class="card-top">
+            <span class="card-number">04</span>
+            <span class="view-affordance">View on X <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+          </div>
+          <div class="logo-wrap">
+            <img src="assets/byzanlink.jpg" width="72" height="72" alt="BYZANLINK official logo" />
+          </div>
+          <h2>BYZANLINK</h2>
+          <span class="role">Ambassador</span>
+          <span class="handle">@byzanlink</span>
+        </a>
+      </div>
+
+      <div class="card-enter" style="--i: 4">
+        <a class="project-card" href="https://x.com/BiyaPay" target="_blank" rel="noopener noreferrer">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-sheen" aria-hidden="true"><span></span></span>
+          <div class="card-top">
+            <span class="card-number">05</span>
+            <span class="view-affordance">View on X <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+          </div>
+          <div class="logo-wrap">
+            <img src="assets/biyapay.jpg" width="72" height="72" alt="BIYAPAY official logo" />
+          </div>
+          <h2>BIYAPAY</h2>
+          <span class="role">KOL / Content Creator</span>
+          <span class="handle">@BiyaPay</span>
+        </a>
+      </div>
+
+      <div class="card-enter" style="--i: 5">
+        <a class="project-card" href="https://x.com/FastXNetwork" target="_blank" rel="noopener noreferrer">
+          <span class="card-glow" aria-hidden="true"></span>
+          <span class="card-sheen" aria-hidden="true"><span></span></span>
+          <div class="card-top">
+            <span class="card-number">06</span>
+            <span class="view-affordance">View on X <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+          </div>
+          <div class="logo-wrap">
+            <img src="assets/fastx-network.jpg" width="72" height="72" alt="FASTX NETWORK official logo" />
+          </div>
+          <h2>FASTX NETWORK</h2>
+          <span class="role">Community &amp; Content Support</span>
+          <span class="handle">@FastXNetwork</span>
+        </a>
+      </div>
+    </section>
+
+    <footer class="contact">
+      <h2>Get in touch</h2>
+      <div class="contact-row">
+        <a class="contact-link" href="https://x.com/Big_aris01" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.74l7.727-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          @Big_aris01
+        </a>
+        <a class="contact-link" href="https://t.me/Aristhegreat1" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          @Aristhegreat1
+        </a>
+        <a class="contact-link" href="mailto:ariszadic@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 7l8 7 8-7"/></svg>
+          ariszadic@gmail.com
+        </a>
+      </div>
+      <p class="fineprint">Official X · Telegram · Email</p>
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+      if (reduce || !finePointer) return;
+
+      const cards = document.querySelectorAll(".project-card");
+      cards.forEach((card) => {
+        card.addEventListener("mousemove", (e) => {
+          const r = card.getBoundingClientRect();
+          const x = e.clientX - r.left;
+          const y = e.clientY - r.top;
+          card.style.setProperty("--mx", x + "px");
+          card.style.setProperty("--my", y + "px");
+          const px = (x / r.width) - 0.5;
+          const py = (y / r.height) - 0.5;
+          card.style.setProperty("--tilt-y", (px * 7).toFixed(2) + "deg");
+          card.style.setProperty("--tilt-x", (-py * 7).toFixed(2) + "deg");
+        });
+        card.addEventListener("mouseleave", () => {
+          card.style.setProperty("--tilt-x", "0deg");
+          card.style.setProperty("--tilt-y", "0deg");
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
